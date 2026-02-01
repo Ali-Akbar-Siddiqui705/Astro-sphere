@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Gallery</title>
+  <link rel="stylesheet" href="./CSS/gallery.css">
+  <link rel="stylesheet" href="./CSS/nav.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <!-- AOS  -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <style>
+   @media (max-width: 998px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+    </style>
+
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+ <div class="stars" data-aos="fade-in"></div>
+
+<div class="container">
+  <!-- Header -->
+  <header data-aos="fade-down" data-aos-duration="1200">
+    <h1>Space Gallery</h1>
+    <p class="subtitle">Explore stunning images from the cosmos, cutting-edge space technology, and the beauty of our universe.</p>
+  </header>
+
+  <!-- Search + Filters -->
+  <div class="controls" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search images...">
+    </div>
+    <div class="filter-buttons">
+      <button class="btn active" style="color:white;" data-filter="all">All</button>
+      <button class="btn" style="color:white;" data-filter="astronomy">Astronomy</button>
+      <button class="btn" style="color:white;" data-filter="technology">Technology</button>
+      <button class="btn" style="color:white;" data-filter="exploration">Exploration</button>
+      <button class="btn" style="color:white;" data-filter="earth">Earth</button>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <main data-aos="fade-up" data-aos-duration="1200" data-aos-delay="400">
+    <section id="gallery" class="topics-grid"></section>
+    <div id="noResults" class="no-results">No images found.</div>
+  </main>
+</div>
+
+  <!-- Javascript -->
+  <div id="footer-placeholder"></div>
+  <script src="/JS/navbar.js" ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  // ✅ Gallery data
+  const data = [
+    { title: "🚀 Space Missions", desc: "From Apollo to Artemis, explore the most important missions that shaped our journey beyond Earth.", cat: "exploration", level: "Beginner", img: "img/space mission.png", link: "Space Missions.html" },
+    { title: "🛰️ Satellites & Spacecrafts", desc: "Learn how satellites orbit our planet, power communication, GPS, and explore faraway worlds.", cat: "technology", level: "Intermediate", img: "img/Satellites & Spacecrafts.png", link: "SatellitesSpacecrafts.html" },
+    { title: "👩‍🚀 Astronauts & Human Spaceflight", desc: "Dive into the lives of astronauts and discover the challenges of living and working in space.", cat: "exploration", level: "Advanced", img: "img/Astronauts & Human Spacefligh.jpg", link: "AstronautsHumanSpaceflight.html" },
+    { title: "🔭 Astronomy & Universe", desc: "Journey through galaxies, stars, and black holes to uncover the mysteries of the universe.", cat: "astronomy", level: "Intermediate", img: "img/Astronomy & Universe.jpg", link: "AstronomyUniverse.html" },
+    { title: "🌍 Earth from Space", desc: "See how satellites capture Earth’s beauty, monitor climate, and help us protect our planet.", cat: "earth", level: "Beginner", img: "img/Earth from Space.jpg", link: "Earth from Space.html" },
+    { title: "🪐 Solar System Exploration", desc: "Discover planets, moons, and asteroids that make up our solar system and beyond.", cat: "astronomy", level: "Intermediate", img: "img/SolarSystemExploration.png", link: "SolarSystemExploration.html" },
+    { title: "⚙️ Space Technology & Innovation", desc: "Explore rockets, spacecraft engineering, AI, and futuristic technologies driving space exploration.", cat: "technology", level: "Advanced", img: "img/Space Technology Innovation.png", link: "Space Technology Innovation.html" },
+    { title: "📜 Space History & Future", desc: "Trace the history of space exploration and look ahead to humanity’s future in the cosmos.", cat: "exploration", level: "Beginner", img: "img/Space History Future.png", link: "Space History Future.html" }
+  ];
+
+  const gallery = document.getElementById("gallery");
+  const searchInput = document.getElementById("searchInput");
+  const buttons = document.querySelectorAll(".btn");
+  const noResults = document.getElementById("noResults");
+
+  let activeFilter = "all";
+
+  // Render function with AOS animations
+  function render(items) {
+    gallery.innerHTML = "";
+    if (items.length === 0) {
+      noResults.style.display = "block";
+      return;
+    }
+    noResults.style.display = "none";
+
+    items.forEach((item, index) => {
+      const card = document.createElement("div");
+      card.className = "topic-card";
+      
+      // ✅ AOS attributes for animation
+      card.setAttribute("data-aos", index % 2 === 0 ? "fade-right" : "fade-left");
+      card.setAttribute("data-aos-duration", "1000");
+      card.setAttribute("data-aos-delay", index * 100);
+
+      card.innerHTML = `
+        <a href="${item.link}" style="text-decoration:none; color:inherit;">
+          <div class="card-image" style="background-image: url('${item.img}')">
+            <span class="badge ${item.level.toLowerCase()}">${item.level}</span>
+          </div>
+          <div class="card-content">
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+            <span class="start-link">Start Learning →</span>
+          </div>
+        </a>
+      `;
+      gallery.appendChild(card);
+    });
+
+    // Refresh AOS after adding dynamic elements
+    AOS.refresh();
+  }
+
+  // Apply filters
+  function applyFilters() {
+    const query = searchInput.value.toLowerCase();
+    const filtered = data.filter(item => {
+      const matchCat = activeFilter === "all" || item.cat === activeFilter;
+      const matchSearch = item.title.toLowerCase().includes(query) || item.desc.toLowerCase().includes(query);
+      return matchCat && matchSearch;
+    });
+    render(filtered);
+  }
+
+  // Search input
+  searchInput.addEventListener("input", applyFilters);
+
+  // Filter buttons
+  buttons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      buttons.forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      activeFilter = btn.dataset.filter;
+      applyFilters();
+    });
+  });
+
+  // Initial render
+  render(data);
+
+  // ✅ Initialize AOS
+  AOS.init({ once: true }); // 'once: true' ensures animation plays only on first scroll
+</script>
+
+</body>
+</html>

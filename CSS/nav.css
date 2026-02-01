@@ -1,0 +1,112 @@
+/* * Navbar background */ 
+.navbar {
+  background-color: rgba(0, 0, 0, 0);
+  /* padding: 0.8rem 0; */
+  padding-top: 10px;
+}
+
+
+/* Navbar links */
+.navbar-nav .nav-link {
+  display: flex;
+  color: white;
+  font-weight: 500;
+  position: relative;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+}
+
+
+.navbar-nav .nav-link:hover {
+  transform: translateY(-4px);
+  color: black;
+  background-image: linear-gradient(to right, #7E08FB, #A550CC);
+  box-shadow: 1px 1px 3px wheat;
+}
+
+/* Dropdown styling */
+.dropdown-menu-dark .dropdown-item:hover {
+  background-color: #222;
+  color: hsl(260, 23%, 95%);
+}
+
+.navbar-nav .active{
+  background-image: linear-gradient(to right, #0F6FE3, #842CFD);
+}
+
+@media (max-width: 991px) {
+  .offcanvas-body .navbar-nav{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .navbar-nav .nav-link{
+    width: 100%;
+    font-size: 18px;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-link:hover {
+  transform: translateY(0px);
+  color: black;
+  background-image: linear-gradient(to right, #7E08FB, #A550CC);
+  box-shadow: 0px 0px 0px wheat;
+}
+}
+
+.navbar {
+  transition: background-color 0.5s ease, box-shadow 0.5s ease;
+  background-color: transparent;
+}
+
+.navbar-scrolled {
+  background-color: rgba(0, 0, 0, 0.85); 
+  backdrop-filter: blur(6px); 
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+
+/* ***************************************** Footer ************************************************************ */
+
+.footer {
+  background: #1E1D41;
+  color: #fff;
+  padding: 60px 0 10px;
+  /* padding-left: 70px; */
+
+}
+
+.footer a {
+  color:#fff;
+  text-decoration: none;
+  transition: color 0.3s;
+  
+}
+
+
+.footer li {
+  color:#fff;
+}
+
+.footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.social-icon {
+  font-size: 1.5rem;
+  margin-right: 15px;
+  color: var(--accent);
+  transition: color 0.3s;
+}
+
+.social-icon:hover {
+  color: white;
+}
+
+.copyright {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 20px;
+  margin-top: 40px;
+}

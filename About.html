@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="./CSS/About.css">
+  <link rel="stylesheet" href="./CSS/nav.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Animate on Scroll (AOS) Library -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <style>
+    /* Button Hover Animation */
+    .btn-main {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .btn-main:hover {
+      transform: scale(1.1) translateY(-3px);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Smooth image hover */
+    .about-section img {
+      transition: transform 0.4s ease;
+    }
+
+    .about-section img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Stats hover animation */
+    .stat {
+      transition: transform 0.3s ease;
+    }
+
+    .stat:hover {
+      transform: scale(1.1) rotate(2deg);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <div id="navbar-placeholder"></div>
+
+  <!-- Section 1 -->
+  <div class="f1">
+    <div class="content">
+      <div class="text" data-aos="fade-right">
+        <h1>About Us</h1>
+        <p>
+          At <b>CosmoVista</b>, we believe the wonders of the universe should be within everyone’s reach.
+          Our mission is to make space science, technology, and exploration accessible and exciting
+          for learners of all ages. From the mysteries of distant galaxies to the cutting-edge innovations
+          powering space missions, we bring knowledge down to Earth in a way that inspires curiosity
+          and sparks imagination. Whether you’re a student, a hobbyist, or a future astronaut,
+          <b>CosmoVista</b> is your gateway to understanding the cosmos.
+        </p>
+      </div>
+
+      <div class="image" data-aos="fade-left">
+        <img src="./img/Untitled-removebg-preview (2).png" alt="Moon Image">
+      </div>
+    </div>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="container">
+    <div class="about-section">
+      <img src="./img/WhatsApp Image 2025-08-14 at 8.37.49 PM.jpeg" alt="Astronomy Image" data-aos="zoom-in">
+      <div class="about-text" data-aos="fade-up">
+        <h2>A Community of Space Learners</h2>
+        <p>We are passionate explorers of the universe…</p>
+        <ul>
+          <li>Learn about space missions and technology</li>
+          <li>Discover planets, stars, and galaxies</li>
+          <li>Stay updated on latest space research</li>
+          <li>Connect with fellow astronomy enthusiasts</li>
+        </ul>
+
+        <!-- Animated Button -->
+        <button class="btn-main" onclick="window.location.href='Topic.html'" data-aos="zoom-in-up">
+          Get Started
+        </button>
+      </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="stats-section">
+      <h2 data-aos="fade-down">Space Knowledge for Everyone</h2>
+      <p style="color: #7a7787;" data-aos="fade-up">
+        Explore missions, technology, and the wonders of our universe.
+      </p>
+
+      <div class="stats-grid">
+        <div class="stat" data-aos="flip-left">
+          <h3>3,200+</h3>
+          <p>Space Articles Published</p>
+        </div>
+        <div class="stat" data-aos="flip-right">
+          <h3>12</h3>
+          <p>Years of Space Research</p>
+        </div>
+        <div class="stat" data-aos="flip-up">
+          <h3>48</h3>
+          <p>Space Missions Covered</p>
+        </div>
+        <div class="stat" data-aos="flip-down">
+          <h3>5,000+</h3>
+          <p>Celestial Objects Catalogued</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div id="footer-placeholder"></div>
+
+  <!-- Scripts -->
+  <script src="./JS/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    //  AOS
+    AOS.init({
+      duration: 1200,  
+      once: true       
+    });
+  </script>
+
+</body>
+
+</html>

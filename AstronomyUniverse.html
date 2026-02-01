@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomy & Universe</title>
+  <link rel="stylesheet" href="./CSS/nav.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    nav .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+
+    #footer-placeholder {
+      text-align: center;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(160deg, #1e063c, #310e63, #4a1585);
+      background-size: 25px 25px, cover;
+      color: #fff;
+      padding-top: 80px;
+
+    }
+
+    .container {
+      max-width: 880px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .back-btn {
+      background: #141414;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background .3s;
+    }
+
+    .back-btn:hover {
+      background: #2a2a2a;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .beginner {
+      background: #2563eb;
+    }
+
+    .time {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 300px;
+      /* aspect ratio maintain karega */
+      border-radius: 12px;
+      display: block;
+    }
+
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 20px 0 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .fact-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: .95rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width:600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        font-size: .95rem;
+      }
+
+      .tag {
+        font-size: .75rem;
+        padding: 5px 10px;
+      }
+    }
+
+    footer {
+      background: #1E1D41;
+      color: #fff;
+      padding: 60px 0 10px;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 30px;
+    }
+
+    footer {
+      text-align: left;
+      margin: 0;
+    }
+
+    .list-unstyled {
+
+      padding-right: 20px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 90px;
+        /* Mobile nav height zyada ho sakti hai */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .banner img {
+        height: 200px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <button class="back-btn" onclick="window.location.href='Topic.html'">
+      ← Back to Learning Hub
+    </button>
+    <h1>🔭 Astronomy & Universe</h1>
+    <div class="tags">
+      <span class="tag beginner">Beginner</span>
+      <span class="tag time">⏱ 25 min read</span>
+    </div>
+    <div class="banner">
+      <img src=".img/Astronomy & Universe.jpg" alt="Galaxy and Stars">
+    </div>
+
+    <p class="description">
+      Astronomy is the study of the universe beyond Earth. It explores stars, planets, galaxies, black holes,
+      and the mysteries of space-time itself. For thousands of years, humans have looked up at the night sky
+      and tried to understand the cosmos.
+    </p>
+
+    <h2>🌌 The Scale of the Universe</h2>
+    <p class="description">
+      The universe is unimaginably vast. Our home galaxy, the <strong>Milky Way</strong>, contains
+      about 100–400 billion stars. Beyond that, there are trillions of galaxies stretching across the
+      observable universe. Light from some galaxies takes billions of years to reach us.
+    </p>
+    <div class="fact-box">✨ Fun Fact: The nearest star to us, Proxima Centauri, is still 4.24 light years away!</div>
+
+    <h2>🌠 Stars & Galaxies</h2>
+    <p class="description">
+      Stars are giant balls of burning gas, mostly hydrogen and helium, that produce light and heat.
+      They form galaxies, which are massive collections of stars, dust, and dark matter bound together by gravity.
+      Our galaxy, the Milky Way, is just one among billions.
+    </p>
+
+    <h2>🕳 Black Holes & Cosmic Mysteries</h2>
+    <p class="description">
+      Black holes are regions of space where gravity is so strong that nothing, not even light, can escape.
+      They are formed when massive stars collapse. Scientists also study dark matter and dark energy,
+      which together make up most of the universe, but remain mysterious.
+    </p>
+    <div class="fact-box">💡 Did You Know? The supermassive black hole at the center of the Milky Way is called
+      Sagittarius A*.</div>
+
+    <h2>🔭 Tools of Astronomy</h2>
+    <p class="description">
+      To study the universe, astronomers use powerful telescopes. The <strong>Hubble Space Telescope</strong>
+      and the new <strong>James Webb Space Telescope</strong> provide breathtaking images and data about distant stars,
+      galaxies, and exoplanets.
+    </p>
+
+    <h2>🚀 Future of Astronomy</h2>
+    <p class="description">
+      Astronomy is moving into a new era with advanced observatories and space missions. Scientists hope
+      to discover Earth-like planets, understand the fate of the universe, and answer the biggest question:
+      Are we alone?
+    </p>
+    <div class="fact-box">🌍 Did You Know? Thousands of exoplanets have been discovered, and some may be capable of
+      supporting life.</div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script src="./JS/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

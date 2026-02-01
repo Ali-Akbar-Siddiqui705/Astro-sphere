@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System Exploration</title>
+  <link rel="stylesheet" href="/CSS/nav.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    nav .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+
+    #footer-placeholder {
+      text-align: center;
+    }
+
+    body {
+      min-height: 100vh;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(160deg, #1e063c, #310e63, #4a1585);
+      background-size: 25px 25px, cover;
+      color: #fff;
+      padding-top: 80px;
+
+    }
+
+    .container {
+      max-width: 880px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    footer {
+      background: #1E1D41;
+      /* aapka footer color */
+      color: #fff;
+      padding: 60px 0 10px;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      /* content ki max width */
+      margin: 0 auto;
+      /* left-right equal margin */
+      padding: 0 30px;
+      /* andar ka equal gap */
+    }
+
+    footer {
+      text-align: left;
+      /* ab text left align hoga */
+      margin: 0;
+    }
+
+
+    .back-btn {
+      background: #141414;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background .3s;
+    }
+
+    .back-btn:hover {
+      background: #2a2a2a;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .beginner {
+      background: #2563eb;
+    }
+
+    .time {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 300px;
+      /* aspect ratio maintain karega */
+      border-radius: 12px;
+      display: block;
+    }
+
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 14px;
+    }
+
+    .note {
+      font-size: .9rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 20px 0 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .fact-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: .95rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    .list-unstyled {
+
+      padding-right: 20px;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width:600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        font-size: .95rem;
+      }
+
+      .tag {
+        font-size: .75rem;
+        padding: 5px 10px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-top: 90px;
+        /* Mobile nav height zyada ho sakti hai */
+      }
+    }
+
+    @media (max-width: 576px) {
+      .banner img {
+        height: 200px !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+  <div class="container">
+    <button class="back-btn" onclick="window.location.href='Topic.html'">
+      ← Back to Learning Hub
+    </button>
+    <h1>🪐 Solar System Exploration</h1>
+    <div class="tags">
+      <span class="tag beginner">Intermediate</span>
+      <span class="tag time">⏱ 25 min read</span>
+    </div>
+    <div class="banner">
+      <img src="img/SolarSystemExploration.png" alt="Solar System">
+    </div>
+
+    <p class="description">
+      Our Solar System is a cosmic neighborhood with the Sun at its center, surrounded by eight planets, dwarf planets,
+      moons, comets, and asteroids.
+      Over centuries, humans have studied and explored these worlds, learning more about our origins and the universe
+      itself.
+    </p>
+
+    <h2>☀️ The Sun</h2>
+    <p class="description">
+      The Sun is the powerhouse of the Solar System, making up over 99% of its total mass.
+      It provides the energy that sustains life on Earth and influences the orbits of all planets.
+    </p>
+    <div class="fact-box">🔥 Fun Fact: The Sun’s core reaches temperatures of about 15 million °C!</div>
+
+    <h2>🌍 The Planets</h2>
+    <p class="description">
+      The eight planets fall into two groups:
+    </p>
+    <ul>
+      <li><strong>Inner Planets</strong> (Mercury, Venus, Earth, Mars) – Rocky and smaller in size.</li>
+      <li><strong>Outer Planets</strong> (Jupiter, Saturn, Uranus, Neptune) – Massive gas and ice giants.</li>
+    </ul>
+
+    <h2>🪐 Dwarf Planets</h2>
+    <p class="description">
+      Worlds like Pluto, Ceres, and Eris are classified as dwarf planets.
+      Though smaller, they reveal important clues about the Solar System’s early history.
+    </p>
+    <div class="fact-box">❄️ Did You Know? Pluto has five known moons, the largest being Charon.</div>
+
+    <h2>🌌 Moons & Rings</h2>
+    <p class="description">
+      Many planets have fascinating moons—Jupiter’s Europa may host a hidden ocean, while Saturn’s Titan has methane
+      lakes.
+      The ring systems of Saturn and other giants are among the most beautiful features in space.
+    </p>
+
+    <h2>🚀 Space Missions</h2>
+    <p class="description">
+      Human-made probes and rovers have revolutionized our knowledge:
+    </p>
+    <ul>
+      <li><strong>Voyager 1 & 2</strong> – Reached the edge of interstellar space.</li>
+      <li><strong>New Horizons</strong> – Sent the first close-up images of Pluto.</li>
+      <li><strong>Mars Rovers</strong> – Studying Mars’ surface and searching for signs of life.</li>
+      <li><strong>Juno</strong> – Revealing Jupiter’s secrets from orbit.</li>
+    </ul>
+
+    <h2>🌠 The Future of Exploration</h2>
+    <p class="description">
+      Upcoming missions aim to explore Europa’s icy oceans, collect samples from Mars, and possibly send humans to other
+      planets.
+      The dream of colonizing Mars and beyond is becoming closer to reality.
+    </p>
+    <div class="fact-box">🚀 Did You Know? Voyager 1 is currently the farthest human-made object in space, over 22
+      billion km from Earth.</div>
+  </div>
+  <div id="footer-placeholder"></div>
+  <script src="/JS/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

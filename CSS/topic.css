@@ -1,0 +1,456 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top, #2b1d7c, #0c0834);
+  color: white;
+  line-height: 1.6;
+}
+
+.topics-section {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 20px;
+}
+
+.topics-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.topics-header p {
+  color: #cfcfe1;
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+/* Grid Layout */
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  /* ✅ Desktop & Tablet dono taraf space */
+}
+
+/* Card */
+.topic-card {
+  
+  background: #111936;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  transition: transform 0.3s ease;
+}
+
+.topic-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image {
+  position: relative;
+  width: 100%;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.badge.beginner {
+  background: #7410E5;
+}
+
+.badge.intermediate {
+  background: #7F29CB;
+}
+
+.badge.advanced {
+  background: #9044C3;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  color: white;
+}
+
+.card-content p {
+  flex-grow: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #cfd5e1;
+  margin-bottom: 15px;
+}
+
+.card-meta {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #9fa8c4;
+}
+
+.start-link {
+  margin-top: auto;
+  display: inline-block;
+  color: #4cc9f0;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.start-link:hover {
+  color: #90e0ef;
+}
+
+/* Explore Button */
+.explore-btn {
+  margin-top: 40px;
+}
+
+.explore-btn a {
+  background-image: linear-gradient(to right, #7E08FB, #A550CC);
+  color: white;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s;
+}
+
+.explore-btn a:hover {
+  opacity: 0.85;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 992px) {
+  .topics-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px;
+    /* ✅ Mobile pe thoda kam spacing */
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .card-content h3 {
+    font-size: 16px;
+  }
+
+  .card-content p {
+    font-size: 13px;
+  }
+}
+
+/* <*********************soler*************************> */
+:root {
+  --bg-top: #0a0e17;
+  --bg-bottom: #050811;
+  --accent: #4dc9ff;
+  --accent-secondary: #8ae2ff;
+  --text-primary: #f0f9ff;
+  --text-secondary: #b3e5fc;
+  --card-bg: rgba(16, 23, 41, 0.7);
+  --card-border: rgba(77, 201, 255, 0.15);
+  --sun-size: 84px;
+  --earth-size: 64px;
+  --moon-size: 22px;
+  --orbit-radius: 160px;
+}
+
+
+
+@keyframes drift {
+  from {
+    transform: translate(0, 0);
+  }
+
+  to {
+    transform: translate(-500px, -400px);
+  }
+}
+
+.card-custom {
+  background: var(--card-bg);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+.logo-icon {
+  font-size: 28px;
+  color: var(--accent);
+}
+
+h1 {
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  -webkit-background-clip: text;
+  /* Chrome/Safari */
+  -webkit-text-fill-color: transparent;
+  /* Chrome/Safari */
+  background-clip: text;
+  /* Firefox fallback */
+  color: transparent;
+  /* Firefox fallback */
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.spaceStage {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.orbit-area {
+  width: min(86vw, 520px);
+  height: min(86vw, 520px);
+  max-width: 520px;
+  max-height: 520px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.sun {
+  width: var(--sun-size);
+  height: var(--sun-size);
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle at 30% 25%, #fff9d6 0%, #ffd54b 18%, #ff9f1c 55%, #ff6f00 100%);
+  box-shadow: 0 0 90px 22px rgba(255, 170, 30, 0.14), 0 0 28px rgba(255, 150, 20, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.2);
+  z-index: 6;
+  animation: sunPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes sunPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    filter: brightness(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+    filter: brightness(1.06);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+/* Earth's orbit around the Sun */
+.earth-orbit {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(0%, 0%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(77, 201, 255, 0.3);
+}
+
+.earth,
+.moon {
+  position: absolute;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  will-change: transform, left, top;
+  z-index: 5;
+  transition: transform 1.2s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+.earth {
+  width: var(--earth-size);
+  height: var(--earth-size);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+  box-shadow: 0 10px 30px rgba(0, 120, 200, 0.08), inset 0 -6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.moon {
+  width: var(--moon-size);
+  height: var(--moon-size);
+  background: radial-gradient(circle at 30% 30%, #f4f4f4 0%, #bfbfbf 60%);
+  box-shadow: 0 0 20px rgba(190, 200, 255, 0.12);
+}
+
+.terminator {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  background: radial-gradient(circle at 65% 50%, rgba(0, 0, 0, 0) 36%, rgba(0, 0, 0, 0.72) 100%);
+  z-index: 6;
+  transition: transform 0.9s cubic-bezier(0.2, 0.9, 0.2, 1);
+}
+
+/* Moon's orbit around Earth */
+.moon-orbit {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+  border: 1px dashed rgba(255, 255, 255, 0.3);
+}
+
+.orbit-label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 3;
+  pointer-events: none;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.info-label {
+  color: var(--text-secondary);
+}
+
+.status {
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.time-display {
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-primary);
+}
+
+.Behav {
+  color: white;
+}
+
+.footer-note {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(77, 201, 255, 0.1);
+  font-size: 12.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+ 
+}
+
+select {
+  background: rgba(16, 23, 41, 0.8);
+  color: var(--text-primary);
+  border: 1px solid rgba(77, 201, 255, 0.2);
+}
+
+select:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(77, 201, 255, 0.2);
+}
+
+/* Modal Styles */
+.modal-content {
+  background: transparent;
+  border: none;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(77, 201, 255, 0.2);
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+}
+
+.modal-body {
+  padding: 0;
+  background: radial-gradient(ellipse at top, var(--bg-top), var(--bg-bottom));
+ height: 700px;
+}
+
+.btn-open-modal {
+  background: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+  border: none;
+  color: var(--text-primary);
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 10px 25px rgba(77, 201, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-open-modal:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(77, 201, 255, 0.4);
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+@media (max-width: 768px) {
+  .orbit-area {
+    width: 86vw;
+    height: 86vw;
+  }
+
+  .orbit-label {
+    font-size: 10px;
+  }
+}

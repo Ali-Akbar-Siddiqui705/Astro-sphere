@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Space Technology & Innovation</title>
+  <link rel="stylesheet" href="/CSS/nav.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <style>
+    nav .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      padding-left: 5% !important;
+      padding-right: 5% !important;
+    }
+
+
+
+    body {
+      min-height: 100vh;
+      background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(160deg, #1e063c, #310e63, #4a1585);
+      background-size: 25px 25px, cover;
+      color: #fff;
+      padding-top: 80px;
+
+    }
+
+    .container {
+      max-width: 880px;
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+
+    .back-btn {
+      background: #141414;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      margin-bottom: 25px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: background .3s;
+    }
+
+    .back-btn:hover {
+      background: #2a2a2a;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .tags {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 6px 14px;
+      border-radius: 999px;
+      font-size: .85rem;
+      font-weight: 500;
+    }
+
+    .beginner {
+      background: #2563eb;
+    }
+
+    .time {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .banner {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+    }
+
+    .banner img {
+      width: 100%;
+      height: 300px;
+      /* aspect ratio maintain karega */
+      border-radius: 12px;
+      display: block;
+    }
+
+    .description {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #ddd;
+      margin-bottom: 14px;
+    }
+
+    .note {
+      font-size: .9rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin: 20px 0 12px;
+      font-weight: 600;
+    }
+
+    ul {
+      margin: 10px 0 20px 20px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .fact-box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 15px;
+      border-radius: 10px;
+      margin: 15px 0;
+      font-size: .95rem;
+      color: #eee;
+      line-height: 1.5;
+    }
+
+    footer {
+      background: #1E1D41;
+      /* aapka footer color */
+      color: #fff;
+      padding: 60px 0 10px;
+    }
+
+    #footer-placeholder {
+      text-align: center;
+    }
+
+    footer .container {
+      max-width: 1200px;
+      /* content ki max width */
+      margin: 0 auto;
+      /* left-right equal margin */
+      padding: 0 30px;
+      /* andar ka equal gap */
+
+    }
+
+    footer {
+      text-align: left;
+      /* ab text left align hoga */
+      margin: 0;
+    }
+     .list-unstyled{
+        
+            padding-right: 20px;
+        }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width:600px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        font-size: .95rem;
+      }
+
+      .tag {
+        font-size: .75rem;
+        padding: 5px 10px;
+      }
+    }
+       @media (max-width: 768px) {
+            body {
+                padding-top: 90px;
+                /* Mobile nav height zyada ho sakti hai */
+            }
+        }
+             @media (max-width: 576px) {
+  .banner img {
+    height: 200px !important;
+  }
+}
+  </style>
+</head>
+
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="container">
+    <button class="back-btn" onclick="window.location.href='Topic.html'">
+      ← Back to Learning Hub
+    </button>
+    <h1>⚙️ Space Technology & Innovation</h1>
+    <div class="tags">
+      <span class="tag beginner">Advanced</span>
+      <span class="tag time">⏱ 30 min read</span>
+    </div>
+    <div class="banner">
+      <img src="img/Space Technology Innovation.png" alt="Space Technology">
+    </div>
+
+    <p class="description">
+      Space technology is the backbone of exploration, enabling humanity to go beyond Earth.
+      From powerful rockets to advanced satellites and futuristic concepts like space tourism,
+      innovation continues to shape the future of space travel and discovery.
+    </p>
+
+    <h2>🚀 Rockets & Propulsion</h2>
+    <p class="description">
+      Rockets are the engines of exploration. Modern advancements include <strong>reusable rockets</strong>
+      by companies like SpaceX, making launches cheaper and more sustainable.
+      Scientists are also exploring <strong>ion propulsion</strong> and <strong>nuclear propulsion</strong>
+      for long-distance missions to Mars and beyond.
+    </p>
+    <div class="fact-box">💡 Fun Fact: SpaceX’s Falcon 9 is the first orbital rocket capable of reflight.</div>
+
+    <h2>🛰 Satellites & Communication</h2>
+    <p class="description">
+      Satellites provide essential data for navigation, weather prediction, communication, and space science.
+      Mega-constellations like <strong>Starlink</strong> aim to deliver high-speed internet worldwide.
+    </p>
+
+    <h2>👩‍🚀 Space Suits & Habitats</h2>
+    <p class="description">
+      Modern space suits are mini spacecrafts that keep astronauts safe.
+      Innovations focus on flexibility, durability, and life support systems for long missions.
+      Future plans include <strong>Martian habitats</strong> designed for survival on the Red Planet.
+    </p>
+
+    <h2>🌌 Cutting-Edge Telescopes</h2>
+    <p class="description">
+      Ground-based and orbital telescopes are revolutionizing astronomy.
+      The <strong>James Webb Space Telescope</strong> has provided the deepest view of the universe ever,
+      capturing galaxies billions of light-years away.
+    </p>
+
+    <h2>🛸 Future Concepts</h2>
+    <p class="description">
+      Futuristic innovations include:
+    </p>
+    <ul>
+      <li><strong>Space Elevators</strong> – A proposed cable system to launch payloads without rockets.</li>
+      <li><strong>Space Tourism</strong> – Companies like Blue Origin and Virgin Galactic already test flights.</li>
+      <li><strong>Colonization</strong> – Building permanent bases on the Moon and Mars.</li>
+    </ul>
+
+    <h2>🚀 The Future Ahead</h2>
+    <p class="description">
+      With rapid progress in private space companies and international missions,
+      the future of space technology is limitless. From mining asteroids to
+      establishing human colonies on other worlds, innovation is the key to humanity’s cosmic future.
+    </p>
+    <div class="fact-box">🔧 Did You Know? 3D printing is being tested on the ISS to create tools and spare parts in
+      space.</div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="/JS/navbar.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
