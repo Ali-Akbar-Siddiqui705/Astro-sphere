@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/componeets/nav.html")
+  fetch("./componeets/nav.html")
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("navbar-placeholder").innerHTML = data;
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Footer
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/componeets/footer.html")
+  fetch("./componeets/footer.html")
     .then((res) => res.text())
     .then((data) => {
       document.getElementById("footer-placeholder").innerHTML = data;
