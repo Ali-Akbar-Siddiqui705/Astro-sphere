@@ -32,7 +32,7 @@
   </header>
 
   <!-- Search + Filters -->
-  <div class="controls" data-aos="fade-up" data-aos-duration="1200" data-aos-delay="200">
+  <div class="controls" data-aos="zoom-in-left" data-aos-duration="1200" data-aos-delay="200">
     <div class="search-box">
       <input type="text" id="searchInput" placeholder="Search images...">
     </div>
@@ -93,7 +93,7 @@
       card.className = "topic-card";
 
       // ✅ AOS attributes for animation
-      card.setAttribute("data-aos", index % 2 === 0 ? "fade-right" : "fade-left");
+      card.setAttribute("data-aos", index % 2 === 0 ? "flip-left" : "flip-right");
       card.setAttribute("data-aos-duration", "1000");
       card.setAttribute("data-aos-delay", index * 100);
 
