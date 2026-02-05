@@ -196,7 +196,29 @@ function showResult() {
     resultDiv.style.display = 'block';
     scoreEl.textContent = `✨ You scored ${score} out of ${questions.length} 🚀`;
 }
-AOS.init({
-    duration: 1000, // animation ka time in ms
-    once: true      // ek hi baar animation play hogi
+// AOS.init({
+//     duration: 1000, // animation ka time in ms
+//     once: true      // ek hi baar animation play hogi
+// });
+// index.js
+
+// Wait for window load
+window.addEventListener('load', () => {
+    // 1️⃣ Initialize AOS
+    AOS.init({
+        duration: 1000, // animation ka time in ms
+        once: true      // ek hi baar animation play hogi
+    });
+
+    // 2️⃣ Refresh AOS positions
+    AOS.refresh();
+
+    // 3️⃣ Force layout reflow to fix alignment issues
+    document.body.style.display = 'none';
+    document.body.offsetHeight; // triggers reflow
+    document.body.style.display = '';
+
+    // 4️⃣ Optional: tiny scroll trick for extra safety
+    window.scrollBy(0, 1);
+    window.scrollBy(0, -1);
 });
