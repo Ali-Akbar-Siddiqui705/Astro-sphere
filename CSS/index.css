@@ -3,6 +3,7 @@
       font-family: 'Inter', sans-serif;
       color: white;
       background-color: #000;
+      overflow-x: hidden;
     }
 
     /* NAVBAR / FOOTER PLACEHOLDER */
